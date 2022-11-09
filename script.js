@@ -48,7 +48,7 @@ function addTodo(todo) {
         todosUL.appendChild(todoEl);
 
         input.value = "";
-
+    
         updateLS();
     }
 }
@@ -61,11 +61,11 @@ function updateLS() {
     todosEl.forEach((todoEl) => {
         todos.push({
             text: todoEl.innerText,
-            completed: todoEl.classList.contai("completed"),
+            completed: todoEl.classList.contains("completed"),
         });
     });
-
-    localStorage.setItem("todos", JSON.stringify(todos));
+    localStorage.setItem('todos', JSON.stringify(todos));
+  
 }
 
 
